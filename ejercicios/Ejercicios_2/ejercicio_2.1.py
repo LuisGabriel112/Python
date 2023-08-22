@@ -4,14 +4,15 @@
 
 profesor = ""
 Alumno_asistente = ""
-alumnos = {
-    
-}
-cantidad_alumnos = 0
 
-while cantidad_alumnos <3:
-    nombre = input("dime tu nombre ") 
-    edad = input("dime tu edad ")
-    alumnos
+my_dict = {}
 
-print(alumnos)
+
+for i in range(10):
+    nombre = input("Dime tu nombre ")
+    edad = int(input("dime tu edad "))
+    i = nombre 
+    my_dict[i] = edad
+
+
+print(my_dict)
