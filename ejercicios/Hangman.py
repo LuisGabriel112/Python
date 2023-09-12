@@ -3,6 +3,8 @@ from colorama import Fore,init
 
 init()
 
+X = ['*','*','*','*',]
+intentos = 4
 
 def bienvenida():
    print(Fore.GREEN+'''
@@ -11,6 +13,26 @@ def bienvenida():
           ******************************
          ''')
 
+def hangman():
+   palabras = ['agua','palo','casa']
+   Hw = random.choice(palabras)
+   Hw.lower
+   print(Hw)
+   ahorcado = prests()
+   letra = input(Fore.LIGHTRED_EX+"Introduce una letra (a-z): ")
+   for letras in X:
+      busqueda = Hw.find(letra)
+      if busqueda != -1:
+         letra
+         print("Encontraste una letra")
+         X.pop(busqueda)
+         X.insert(busqueda,letra)
+         print(X)
+      else:
+         intentosN = intentos - 1
+         print("Sigue intentando")
+         print(ahorcado[0])
+
 
 def prests():
    ahorcado0 =Fore.YELLOW+ '''
@@ -18,7 +40,6 @@ def prests():
            I
                    
                    
-        _ _ _ _
           '''
 
    ahorcado1 =Fore.YELLOW+  '''
@@ -66,31 +87,19 @@ def prests():
         _ _ _ _   
           '''
 
-   ahorcado6 =Fore.YELLOW+  '''
+   ahorcado6 =Fore.YELLOW+  f'''
 ~~~~~~~~~~~|~~~~~~~~~
            I
            o
           /|\
           / \   
-                 
+      
         _ _ _ _  
           '''
    return [ahorcado0, ahorcado1, ahorcado2, ahorcado3, ahorcado4, ahorcado5, ahorcado6]
 
    
-def hangman():
-   palabras = ['agua','palo','casa']
-   Hw = random.choice(palabras)
-   Hw.lower
-   print(Hw)
-   ahorcado = prests()
-   letra = input(Fore.LIGHTRED_EX+"Introduce una letra (a-z): ")
-   busqueda = Hw.find(letra)
-   if busqueda == 1:
-      print("Encontraste una letra")
-   else:
-      print("Sigue intentando")
-   #if input == Hw:
+
    
 
     
